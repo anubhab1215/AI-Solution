@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <script>
+    function loadHTML(id, file) {
+      fetch(file)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+          highlightActiveLink();
+        });
+    }
+
+    function highlightActiveLink() {
+      const page = window.location.pathname.split('/').pop().split('.').shift();
+      document.getElementById(`${page}-link`)?.classList.add('active');
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav img {
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #575757;
+      box-shadow: 0 0 10px 2px white;
+    }
+
+    .services-header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .services-header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .services-header p {
+      font-size: 1.2em;
+    }
+
+    .services-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .service-card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <nav>
+      <img src="AI-Solutions.png" alt="Company Logo" id="logo-space">
+      <ul>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="about.html" id="about-link">About Us</a></li>
+        <li><a href="services.html" id="services-link">Services</a></li>
+        <li><a href="portfolio.html" id="portfolio-link">Portfolio</a></li>
+        <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
+        <li><a href="admin.html" id="admin-link">Admin</a></li>
+        <li><a href="contact.html" id="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Services Header Section -->
+    <div class="services-header">
+      <h1>Our Services</h1>
+      <p>Discover how AI-Solutions can transform your business with cutting-edge AI solutions.</p>
+    </div>
+
+    <!-- Services Content Section -->
+    <section class="services-content">
+      <div class="service-card">
+        <h2>AI-Powered Virtual Assistant</h2>
+        <p>
+          Enhance your digital workplace with our intelligent virtual assistant that understands 
+          and responds to your employees' needs in real-time.
+        </p>
+      </div>
+      <div class="service-card">
+        <h2>Prototyping Solutions</h2>
+        <p>
+          Rapidly design and prototype innovative software solutions tailored to your industry.
+        </p>
+      </div>
+      <div class="service-card">
+        <h2>Issue Prediction and Prevention</h2>
+        <p>
+          Leverage predictive analytics to proactively address potential issues in your digital 
+          infrastructure.
+        </p>
+      </div>
+      <div class="service-card">
+        <h2>Custom AI Software</h2>
+        <p>
+          Tailored AI software solutions for unique challenges in your business environment.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 AI-Solutions. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Integration</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <!-- Content of the webpage -->
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script>
+    function highlightActiveLink() {
+      const page = window.location.pathname.split('/').pop().split('.').shift();
+      document.getElementById(`${page}-link`)?.classList.add('active');
+    }
+
+    window.onload = highlightActiveLink;
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav img {
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #575757;
+      box-shadow: 0 0 10px 2px white;
+    }
+
+    .portfolio-header {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .portfolio-header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-header p {
+      font-size: 1.2em;
+    }
+
+    .portfolio-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .portfolio-card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .portfolio-card h2 {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .portfolio-card p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <nav>
+      <img src="AI-Solutions.png" alt="Company Logo" id="logo-space">
+      <ul>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="about.html" id="about-link">About Us</a></li>
+        <li><a href="services.html" id="services-link">Services</a></li>
+        <li><a href="portfolio.html" id="portfolio-link">Portfolio</a></li>
+        <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
+        <li><a href="admin.html" id="admin-link">Admin</a></li>
+        <li><a href="contact.html" id="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Portfolio Header Section -->
+    <div class="portfolio-header">
+      <h1>Our Portfolio</h1>
+      <p>Explore our successful projects and the impact we’ve created across industries.</p>
+    </div>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="portfolio-gallery">
+      <div class="portfolio-card">
+        <img src="project1-placeholder.jpg" alt="Project 1">
+        <h2>Project 1</h2>
+        <p>
+          Description of Project 1 and how it solved specific industry challenges using AI.
+        </p>
+      </div>
+      <div class="portfolio-card">
+        <img src="project2-placeholder.jpg" alt="Project 2">
+        <h2>Project 2</h2>
+        <p>
+          Detailed insights into Project 2 and the innovative AI-driven approach implemented.
+        </p>
+      </div>
+      <div class="portfolio-card">
+        <img src="project3-placeholder.jpg" alt="Project 3">
+        <h2>Project 3</h2>
+        <p>
+          Outcomes of Project 3 and the measurable benefits provided to the client.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 AI-Solutions. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Integration</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <!-- Content of the webpage -->
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

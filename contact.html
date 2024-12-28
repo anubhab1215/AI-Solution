@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <script>
+    function highlightActiveLink() {
+      const page = window.location.pathname.split('/').pop().split('.').shift();
+      document.getElementById(`${page}-link`)?.classList.add('active');
+    }
+
+    window.onload = highlightActiveLink;
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav img {
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #575757;
+      box-shadow: 0 0 10px 2px white;
+    }
+
+    .contact-header {
+      background: linear-gradient(to right, #56ab2f, #a8e063);
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .contact-header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .contact-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    form button {
+      background-color: #56ab2f;
+      color: white;
+      font-size: 1.2em;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #4a9b28;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <nav>
+      <img src="AI-Solutions.png" alt="Company Logo" id="logo-space">
+      <ul>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="about.html" id="about-link">About Us</a></li>
+        <li><a href="services.html" id="services-link">Services</a></li>
+        <li><a href="portfolio.html" id="portfolio-link">Portfolio</a></li>
+        <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
+        <li><a href="admin.html" id="admin-link">Admin</a></li>
+        <li><a href="contact.html" id="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact-container">
+      <h2>We'd love to hear from you!</h2>
+      <form action="submit_contact_form.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company" placeholder="Enter your company name">
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" placeholder="Enter your country">
+
+        <label for="job-title">Job Title</label>
+        <input type="text" id="job-title" name="job-title" placeholder="Enter your job title">
+
+        <label for="job-details">Job Details</label>
+        <textarea id="job-details" name="job-details" placeholder="Describe your job requirements" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 AI-Solutions. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Integration</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <!-- Content of the webpage -->
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

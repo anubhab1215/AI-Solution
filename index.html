@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <script>
+    function loadHTML(id, file) {
+      fetch(file)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+          highlightActiveLink();
+        });
+    }
+
+    function highlightActiveLink() {
+      const page = window.location.pathname.split('/').pop().split('.').shift();
+      document.getElementById(`${page}-link`)?.classList.add('active');
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav img {
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #575757;
+      box-shadow: 0 0 10px 2px white;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .feature {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 1em;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <nav>
+      <img src="AI-Solutions.png" alt="Company Logo" id="logo-space">
+      <ul>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="about.html" id="about-link">About Us</a></li>
+        <li><a href="services.html" id="services-link">Services</a></li>
+        <li><a href="portfolio.html" id="portfolio-link">Portfolio</a></li>
+        <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
+        <li><a href="admin.html" id="admin-link">Admin</a></li>
+        <li><a href="contact.html" id="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Welcome to AI-Solutions</h1>
+      <p>Your AI-powered future starts here! Experience innovation, speed, and excellence in design and engineering.</p>
+      <a href="services.html" style="color: white; text-decoration: underline;">Explore Our Services</a>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="feature">
+        <h2>AI Virtual Assistant</h2>
+        <p>Our AI-powered assistant is here to provide instant solutions and proactive insights.</p>
+      </div>
+      <div class="feature">
+        <h2>Affordable Prototyping</h2>
+        <p>Revolutionize your design process with our cost-effective prototyping solutions.</p>
+      </div>
+      <div class="feature">
+        <h2>Global Impact</h2>
+        <p>Join us on our mission to innovate and enhance the digital employee experience worldwide.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 AI-Solutions. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Integration</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <!-- Content of the webpage -->
+  <script src="chatbot.js" defer></script>
+</body>
+</html>
